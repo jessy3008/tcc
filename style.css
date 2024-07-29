@@ -13,21 +13,61 @@ body {
     padding: 10px 0;
 }
 
-.sobre h2 {
-    font-size: 25px;
-    margin: 10px 0;
+.sobre {
+    background-color: #ffeaca;
+    padding: 40px 20px;
+}
+
+.sobre-container {
+    max-width: 900px;
+    margin: 0 auto;
     text-align: center;
-    padding: 15px;
+}
+
+.sobre h2 {
+    font-size: 30px;
+    color:#3e2203;
+    margin-bottom: 20px;
 }
 
 .sobre p {
-    text-align: center;
-    padding: 15px;
+    font-size: 18px;
+    color: #5c3d28;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-.sobre ul {
-    text-align: center;
+.membros ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
+
+.membros li {
+    background-color:#865b35;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    color:wheat;
+}
+
+.membros li:hover {
+    background-color: #965124;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    color: wheat;
+}
+
+.membros strong {
+    display: block;
+    font-size: 18px;
+    color: #f3e9e0;
+}
+
 
 nav {
     display: flex;
@@ -59,10 +99,17 @@ nav .cart-icon {
 }
 
 .hero {
+    position: relative;
     text-align: center;
     padding: 50px 20px;
     background: linear-gradient(to bottom right, #522711, #c69e7a);
-    color: white
+    color: white;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
@@ -75,26 +122,38 @@ nav .cart-icon {
     margin: 20px 0;
 }
 
-.hero button {
-    background-color: #3e2203;
-    color: white;
-    border: none;
+.hero-button {
+    display: inline-block;
     padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #703b12;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
     cursor: pointer;
-    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
+.hero-button:hover {
+    background-color: #5c3d28;
+}
 .hero img {
-    margin-top: 20px;
-    max-width: 100%;
-    height: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: 0;
 }
-
 
 .noticias {
     padding: 50px 20px;
     text-align: center;
-    background-color: #f4e8cb;
+    background-color: #f1c695;
 }
 
 .noticias h2 {
@@ -146,7 +205,7 @@ nav .cart-icon {
 .card-cartilha {
     padding: 10px 10px;
     text-align: center;
-    background-color: #c69d7ab0;
+    background-color: #f1d8c1;
 }
 
 .carousel {
