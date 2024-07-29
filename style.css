@@ -13,6 +13,22 @@ body {
     padding: 10px 0;
 }
 
+.sobre h2 {
+    font-size: 25px;
+    margin: 10px 0;
+    text-align: center;
+    padding: 15px;
+}
+
+.sobre p {
+    text-align: center;
+    padding: 15px;
+}
+
+.sobre ul {
+    text-align: center;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
