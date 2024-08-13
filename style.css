@@ -6,6 +6,13 @@ body {
     background-color: #FFF5EC;
 }
 
+nav .logo img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+}
+
+
 .top-banner {
     background-color: hsl(27, 70%, 28%);
     color: white;
