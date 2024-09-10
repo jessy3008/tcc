@@ -7,7 +7,7 @@ body {
 }
 
 nav .logo img {
-    max-width: 150px;
+    max-width: 80px;
     height: auto;
     display: block;
 }
@@ -21,8 +21,11 @@ nav .logo img {
 }
 
 .sobre {
-    background-color: #ffeaca;
+    background: linear-gradient(rgba(255, 234, 202, 0.8), rgba(255, 234, 202, 0.8)), 
+                url('img/imagem_sobre.png') no-repeat center center;
+    background-size: cover;
     padding: 40px 20px;
+    position: relative;
 }
 
 .sobre-container {
@@ -39,40 +42,26 @@ nav .logo img {
 
 .sobre p {
     font-size: 18px;
-    color: #5c3d28;
+    color: #543825;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
 .membros ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
 }
 
 .membros li {
-    background-color:#865b35;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s;
-    color:wheat;
+    padding: 5px 0;
+    font-size: 16px;
+    color: #865b35;
 }
 
-.membros li:hover {
-    background-color: #965124;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-    color: wheat;
-}
-
-.membros strong {
-    display: block;
+.membros li strong {
     font-size: 18px;
-    color: #f3e9e0;
+    color: #5d3911;
 }
 
 
@@ -146,7 +135,7 @@ nav .cart-icon {
 }
 
 .hero-button:hover {
-    background-color: #5c3d28;
+    background-color: #a06943;
 }
 .hero img {
     position: absolute;
@@ -163,12 +152,13 @@ nav .cart-icon {
 .noticias {
     padding: 50px 20px;
     text-align: center;
-    background-color: #f1c695;
+    background-color: #6b4a26;
 }
 
 .noticias h2 {
     font-size: 28px;
     margin-bottom: 30px;
+    color:#ffe4c3;
 }
 
 .noticias-carousel {
@@ -183,7 +173,7 @@ nav .cart-icon {
     max-width: 250px;
     margin: 0 10px;
     padding: 10px;
-    background-color: rgb(97, 59, 21);
+    background-color: rgb(146, 105, 65);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -204,7 +194,7 @@ nav .cart-icon {
 
 .noticias-card a {
     text-decoration: none;
-    color: #ffe8e8;
+    color: #ffe4c3;
 }
 
 .noticias-card:hover {

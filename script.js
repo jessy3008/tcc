@@ -1,5 +1,5 @@
 const contents = [
-    "O racismo é...",
+    "De maneira simplificada, o racismo ocorre quando as pessoas são tratadas de maneiras diferentes (seja para receber benefícios ou negação de seus direitos, por exemplo) por causa de seus traços fenotípicos (como a cor da pele, a textura do cabelo, o formato do nariz) ou por sua etnia (sua nacionalidade, afiliação tribal, religião, língua e as tradições de um determinado grupo). Isso pode acontecer de modo proposital ou não, mas acaba prejudicando alguns grupos, como por exemplo negros e indígenas, e beneficiando outros, como a população branca.",
     "O racismo se manifesta...",
     "quem sofre racismo no Brasil...",
     "Como identificar no ambiente escolar...",
