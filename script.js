@@ -1,21 +1,21 @@
-const contents = [
-    "De maneira simplificada, o racismo ocorre quando as pessoas são tratadas de maneiras diferentes (seja para receber benefícios ou negação de seus direitos, por exemplo) por causa de seus traços fenotípicos (como a cor da pele, a textura do cabelo, o formato do nariz) ou por sua etnia (sua nacionalidade, afiliação tribal, religião, língua e as tradições de um determinado grupo). Isso pode acontecer de modo proposital ou não, mas acaba prejudicando alguns grupos, como por exemplo negros e indígenas, e beneficiando outros, como a população branca.",
-    "O racismo se manifesta...",
-    "quem sofre racismo no Brasil...",
-    "Como identificar no ambiente escolar...",
-    "O que fazer em um caso de racismo..."
-];
-
+// alteração: função para mostrar o conteúdo dinâmico
 function showContent(index) {
     const contentDiv = document.getElementById("content");
     contentDiv.innerHTML = `<p>${contents[index]}</p>`;
-}
+    
+// alteração: reaplica o ScrollReveal após a atualização do conteúdo
+    ScrollReveal().reveal('.content', { delay: 100, reset: true });
+};
 
-ScrollReveal().reveal('.hero', { delay: 100 });
-ScrollReveal().reveal('.card-cartilha', { delay: 300 });
-ScrollReveal().reveal('.testimonials', { delay: 500 });
-ScrollReveal().reveal('.about', { delay: 700 });
-ScrollReveal().reveal('.card', { interval: 50 });
+// alteração: função para executar o ScrollReveal após o carregamento completo da página
+window.onload = function() {
+    ScrollReveal().reveal('.hero', { delay: 100 });
+    ScrollReveal().reveal('.sobre', { delay: 200 });
+    ScrollReveal().reveal('.noticias', { delay: 300 });
+    ScrollReveal().reveal('.card-cartilha', { delay: 400 });
+    ScrollReveal().reveal('.content', { delay: 100, reset: true });
+};
+
 
 $(document).ready(function(){
     $('.news-carousel').slick({
