@@ -47,6 +47,34 @@ nav .cart-icon {
     font-size: 24px;
 }
 
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Alinha os itens em coluna */
+        align-items: flex-start; /* Alinha à esquerda */
+    }
+
+    nav .logo {
+        font-size: 20px; /* Reduz o tamanho da fonte da logo */
+        margin-bottom: 10px; /* Adiciona espaçamento abaixo da logo */
+    }
+
+    nav ul {
+        flex-direction: column; /* Exibe os itens da lista em coluna */
+        gap: 10px; /* Reduz o espaçamento entre os itens */
+        padding: 0; /* Remove padding extra */
+        width: 100%; /* Ocupar toda a largura da tela */
+    }
+
+    nav ul li {
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+
+    nav .cart-icon {
+        font-size: 20px; /* Reduz o tamanho do ícone */
+        margin-top: 10px; /* Adiciona espaçamento acima do ícone */
+    }
+}
+
 
 
 
@@ -298,3 +326,72 @@ nav .cart-icon {
     background-color: #5a2e0e;
 }
 
+
+
+/*Footer*/
+.site-footer {
+    background-color:#3e2203;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.site-footer h3 {
+    color:#f7dcb6;
+}
+
+.site-footer p {
+    color:#e1c49a;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para manter responsivo */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-info,
+.footer-developer {
+    text-align: left;
+    max-width: 300px;
+}
+
+.footer-info h3,
+.footer-developer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-info p,
+.footer-developer p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.footer-info a,
+.footer-developer a {
+    color: #ffddb0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-info a:hover,
+.footer-developer a:hover {
+    color:#663813;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
