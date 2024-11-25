@@ -6,15 +6,15 @@ body {
 
 }
 
+/*MENU*/
 
-
-nav .logo img {
+.nav1 .logo img {
     max-width: 80px;
     height: auto;
     display: block;
 }
 
-nav {
+.nav1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,61 +22,62 @@ nav {
     background-color:#3e2203;
 }
 
-nav .logo {
+.nav1 .logo {
     font-size: 24px;
     font-weight: bold;
 }
 
-nav ul {
+.nav1 ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-nav ul li a {
+.nav1 ul li a {
     text-decoration: none;
     color: #f7dcb6;
     font-weight: bold;
 }
 
-nav ul li a:hover {
+.nav1 ul li a:hover {
     color: #5b3813;
 }
 
-nav .cart-icon {
+.nav1 .cart-icon {
     font-size: 24px;
 }
 
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Alinha os itens em coluna */
-        align-items: flex-start; /* Alinha à esquerda */
-    }
+/*menu mobile*/
 
-    nav .logo {
-        font-size: 20px; /* Reduz o tamanho da fonte da logo */
-        margin-bottom: 10px; /* Adiciona espaçamento abaixo da logo */
-    }
 
-    nav ul {
-        flex-direction: column; /* Exibe os itens da lista em coluna */
-        gap: 10px; /* Reduz o espaçamento entre os itens */
-        padding: 0; /* Remove padding extra */
-        width: 100%; /* Ocupar toda a largura da tela */
-    }
-
-    nav ul li {
-        text-align: left; /* Alinha o texto à esquerda */
-    }
-
-    nav .cart-icon {
-        font-size: 20px; /* Reduz o tamanho do ícone */
-        margin-top: 10px; /* Adiciona espaçamento acima do ícone */
-    }
+.menu-mobile {
+    background-color:#311704;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 150%;
+    height: 100vh;
+    z-index: 1000;
 }
 
+.menu-mobile .nav2 a {
+    color:#e1c49a;
+    text-decoration: none;
+    display: block;
+    padding: 20px 35px;
+    font-size: 17px;
+}
 
+.menu-mobile .nav2 a:hover {
+    color:#703b12;
+}
 
+@media screen and (max-width: 1020px) {
+    
+}
+
+/* HERO */
 
 .hero {
     position: relative;
@@ -121,6 +122,7 @@ nav .cart-icon {
 .hero-button:hover {
     background-color: #a06943;
 }
+
 .hero img {
     position: absolute;
     top: 0;
@@ -133,11 +135,7 @@ nav .cart-icon {
     z-index: 1;
 }
 
-
-
-
-
-
+/*SOBRE O NEABI*/
 .sobre {
     background: linear-gradient(rgb(67, 37, 5), rgba(96, 63, 13, 0.906)), 
                 url('img/imagem_sobre.png') no-repeat center center;
@@ -182,7 +180,7 @@ nav .cart-icon {
     color: #f7dcb6;
 }
 
-
+/*CARROSSEL DE NOTÍCIAS*/
 
 
 .noticias {
@@ -271,7 +269,7 @@ nav .cart-icon {
 
 
 
-/* CSS para a seção da Cartilha */
+/*Cartilha */
 .cartilha {
     padding: 50px 20px;
     background-color:#4b2e10;
@@ -311,6 +309,13 @@ nav .cart-icon {
     margin-bottom: 10px;
 }
 
+.cartilha-content .convite {
+    font-size: 15px;
+    line-height: 1.5;
+    color:#fcebd4;
+    margin-bottom: 10px;
+}
+
 .cartilha-link {
     display: inline-block;
     margin-top: 10px;
@@ -323,7 +328,7 @@ nav .cart-icon {
 }
 
 .cartilha-link:hover {
-    background-color: #5a2e0e;
+    background-color: #311704;
 }
 
 
@@ -389,9 +394,142 @@ nav .cart-icon {
     color:#663813;
 }
 
-@media (max-width: 768px) {
-    .footer-container {
+@media screen and (max-width: 1020px){
+    /* CABEÇALHO */
+    .menu li{
+        display: none;
+    }
+
+    .hero {
+        position: relative;
+        height: 0px;
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .hero h1 {
+        font-size: 46px;
+        margin: 0;
+    }
+
+    .hero h2 {
+        font-size: 11px;
+        margin: 2px;
+        padding-bottom: 5px;
+    }
+
+    .hero-button {
+        display: inline-block;
+        padding: 10px;
+        font-size: 0.8rem;
+        color: white;
+        background-color: #663813;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        z-index: 2;
+        position: relative;
+    
+    }
+
+    .hero img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.2;
+        z-index: 1;
+    }
+
+    .sobre {
+        background: linear-gradient(rgb(67, 37, 5), rgba(69, 41, 0, 0.9));
+        background-size: cover;
+        padding: 40px 20px;
+        position: relative;
+
+    }
+    
+    .membros li {
+        padding-bottom: 15px;
+        font-size: 16px;
+        color: #e1c49a;
+    }
+    
+    .membros li strong {
+        font-size: 20px;
+        color: #f7dcb6;
+    }
+    
+    .cartilha h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color:#e1c49a;
+    }
+
+    .cartilha-content {
+        max-width: 600px;
         text-align: center;
     }
+    
+    .cartilha-content p {
+        font-size: 15px;
+        line-height: 1.5;
+        color:#e1c49a;
+        margin-bottom: 10px;
+    }
+
+    .cartilha-content .convite {
+        font-size: 15px;
+        line-height: 1.5;
+        color:#fcebd4;
+        margin-bottom: 10px;
+    }
+    
+    .cartilha-link {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: #703b12;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    } 
+     
+    /*FOOTER/RODAPÉ*/
+
+    .site-footer {
+        flex-direction: column;
+       
+    }
+
+    .footer-logo img {
+        max-width: 100px;
+    }
+    
+    .footer-info,
+    .footer-developer {
+        max-width: 300px;
+        text-align: center;
+    }
+    
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0;
+        gap: 5x;
+    }
+
 }

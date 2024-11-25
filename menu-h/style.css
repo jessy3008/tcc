@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn-menu {
+    width: 300px;
+    height: 300px;
+    border: 4px solid #ccc;
+    background: transparent;
+    border-radius: 10px;
+    z-index: 1005;
+}
+
+.linha {
+    width: 200px;
+    height: 10px;
+    background-color: #ccc;
+    display: block;
+    margin: 30px auto;
+    position: relative;
+    transform-origin: center;
+    
+}
