@@ -26,12 +26,18 @@
                     <li><a href="#cartilha">CARTILHA</a></li>
                     <li><a href="#">DENÚNCIAS</a></li>
                 </ul>
+
+                <button onclick="animar()" id="btn-menu">
+                    <span class="linha"></span>
+                    <span class="linha"></span>
+                    <span class="linha"></span>
+                </button>
+
             </nav>
         </div>
 
 
-
-        <div class="menu-mobile">
+        <div class="menu-mobile" id="menu-mobile">
             <nav class="nav2">
                 <a href="#sobre">SOBRE O NEABI</a>
                 <a href="#noticias">NOTÍCIAS</a>
@@ -167,9 +173,16 @@
 </footer>
 
 
-
+<script>
+    function animar(){
+        const btn = document.getElementById("btn-menu")
+        btn.classList.toggle("ativar")
+    }
+</script>
 
 <script src="script.js"></script>
+<script src="animar.js"></script>
+
 </body>
 <!-- 
 obs: arquivo certo  -->

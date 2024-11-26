@@ -31,6 +31,7 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin-left:auto;
 }
 
 .nav1 ul li a {
@@ -49,15 +50,15 @@ body {
 
 /*menu mobile*/
 
-
 .menu-mobile {
     background-color:#311704;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(100px);
     position: absolute;
-    top: 80px;
+    top: 86px;
     left: 0;
-    width: 150%;
+    width: 60%;
     height: 100vh;
+    visibility: hidden;
     z-index: 1000;
 }
 
@@ -70,11 +71,51 @@ body {
 }
 
 .menu-mobile .nav2 a:hover {
-    color:#703b12;
+    background-color:#703b12;
 }
 
 @media screen and (max-width: 1020px) {
+   
     
+}
+
+/* BOTÃO 3 BARRINHAS*/
+#btn-menu {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #e1c49a;
+    background: transparent;
+    border-radius: 10px;
+    z-index: 2000;
+    cursor: pointer;
+    visibility: hidden;
+
+}
+
+.linha {
+    width: 25px;
+    height: 5px;
+    background-color: #e1c49a;
+    display: block;
+    margin: 5px auto;
+    position: relative;
+    transform-origin: center;
+    transition: 0.5;
+}
+
+/*pra aparecer o X no menu hamburguer*/
+button.ativar .linha:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+    background-color: #e1c49a;
+}
+
+button.ativar .linha:nth-child(3) {
+    transform: translateY(-10px) rotate(45deg);
+    background-color: #e1c49a;
+}
+
+button.ativar .linha:nth-child(2) {
+    width: 0;
 }
 
 /* HERO */
@@ -398,6 +439,14 @@ body {
     /* CABEÇALHO */
     .menu li{
         display: none;
+    }
+
+    #btn-menu {
+        visibility: visible;
+    }
+
+    .menu-mobile.abrir {
+        visibility: visible;
     }
 
     .hero {
