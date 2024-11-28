@@ -178,7 +178,7 @@ button.ativar .linha:nth-child(2) {
 
 /*SOBRE O NEABI*/
 .sobre {
-    background: linear-gradient(rgb(67, 37, 5), rgba(96, 63, 13, 0.906)), 
+    background: linear-gradient(rgb(67, 37, 5), rgba(96, 63, 13, 0.87)), 
                 url('img/imagem_sobre.png') no-repeat center center;
     background-size: cover;
     padding: 40px 20px;
@@ -204,21 +204,25 @@ button.ativar .linha:nth-child(2) {
     margin-bottom: 20px;
 }
 
-.membros ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    text-align: left;
+.sobre-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color:#3e2203;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+    position: relative;
+    margin-bottom: 25px;
+
 }
 
-.membros li {
-    padding: 5px 0;
-    font-size: 16px;
-    color: #e1c49a;
-}
-
-.membros li strong {
-    font-size: 18px;
-    color: #f7dcb6;
+.sobre-button:hover {
+    background-color: #a06943;
 }
 
 /*CARROSSEL DE NOTÍCIAS*/
