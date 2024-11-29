@@ -6,7 +6,14 @@ body {
 
 }
 
-/*MENU*/
+/*HEADER / MENU*/
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 3000;
+}
 
 .nav1 .logo img {
     max-width: 80px;
@@ -51,8 +58,8 @@ body {
 /*menu mobile*/
 
 .menu-mobile {
-    background-color:#311704;
-    backdrop-filter: blur(100px);
+    background-color:#311704a8;
+    backdrop-filter: blur(5px);
     position: absolute;
     top: 86px;
     left: 0;
@@ -71,12 +78,7 @@ body {
 }
 
 .menu-mobile .nav2 a:hover {
-    background-color:#703b12;
-}
-
-@media screen and (max-width: 1020px) {
-   
-    
+    background-color:#7e4e29e1;
 }
 
 /* BOTÃO 3 BARRINHAS*/
@@ -122,6 +124,7 @@ button.ativar .linha:nth-child(2) {
 
 .hero {
     position: relative;
+    margin-top: 90px;
     text-align: center;
     padding: 150px 20px;
     background: linear-gradient(to bottom right, #522711, #aa7a4fe4);
@@ -222,6 +225,15 @@ button.ativar .linha:nth-child(2) {
 
 .sobre-button:hover {
     background-color: #a06943;
+}
+
+.saiba_mais {
+    text-decoration: none;
+    color: #925d37;
+}
+
+.saiba_mais:hover {
+    color:#ffc273
 }
 
 /*CARROSSEL DE NOTÍCIAS*/
