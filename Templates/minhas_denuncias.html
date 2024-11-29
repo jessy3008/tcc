@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Denúncias</title>
+    <link rel="stylesheet" href="../static/css/minhasdenuncias.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Minhas Denúncias</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tipo de Denúncia</th>
+                    <th>Status</th>
+                    <th>Descrição</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for denuncia in denuncias %}
+                <tr>
+                    <td>{{ denuncia[0] }}</td>
+                    <td>{{ denuncia[1] }}</td>
+                    <td>{{ denuncia[2] }}</td>
+                    <td>{{ denuncia[3] }}</td>
+                    <td>{{ denuncia[4] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a class="voltar-btn" href="{{ url_for('denuncia_form') }}">Voltar para página de denúncia</a>
+    </div>
+</body>
+</html>

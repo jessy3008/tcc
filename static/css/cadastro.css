@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(to right, #FFF5EC, #ffe4c3);
+    color: #5c4a4a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 480px;
+    width: 100%;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    font-size: 26px;
+    color: #703b12;
+    text-align: center;
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    color: #543825;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    color: #4a3e36;
+    border: 1px solid #d6c6b8;
+    border-radius: 8px;
+    background-color: #fbf8f3;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-color: #865b35;
+    box-shadow: 0 0 8px rgba(134, 91, 53, 0.3), inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #703b12;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(96, 56, 23, 0.3);
+}
+
+.submit-btn:hover {
+    background: #865b35; 
+    box-shadow: 0 5px 15px rgba(217, 161, 117, 0.4);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 25px 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .submit-btn {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+

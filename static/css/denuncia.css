@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(to right, #FFF5EC, #ffe4c3); 
+    color: #543825;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+h2 {
+    font-size: 28px;
+    color: #703b12;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 15px;
+    color: #543825;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    color: #4a3e36;
+    border: 1px solid #d6c6b8;
+    border-radius: 8px;
+    background-color: #fbf8f3;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+textarea {
+    resize: none; 
+    min-height: 100px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+input[type="number"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #d6c6b8;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF5EC;
+    background: #703b12;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(146, 105, 65, 0.3);
+    letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+    background: #865b35;
+    box-shadow: 0 5px 15px rgba(146, 105, 65, 0.4);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+
+.view-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #6b4e4e;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid #c8a888;
+    border-radius: 8px;
+    background-color: #fdfbf8;
+    text-align: center;
+}
+
+.view-link:hover {
+    background-color: #d7a98b;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    input[type="number"],
+    input[type="date"],
+    textarea,
+    select {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    button[type="submit"] {
+        padding: 12px;
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neabi IFCM</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="top-banner">
+            @NEABIIFCM
+        </div>
+        
+        <nav>
+            <div class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo NEABI"></div>
+            <ul>
+                <li><a href="#sobre">SOBRE O NEABI</a></li>
+                <li><a href="#noticias">NOTÍCIAS</a></li>
+                <li><a href="#cartilha">CARTILHA</a></li>
+                <li><a href="{{ url_for('login_form') }}">DENÚNCIAS</a></li> 
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        <section class="hero">
+            <h1>NEABI</h1>
+            <h2>NÚCLEO DE ESTUDOS AFROBRASILEIROS E INDÍGENAS</h2>
+            <a href="https://www.canva.com/design/DAGEjlG3Qcs/bPQTRdSB2TD96mJ9ASZREA/edit?utm_content=DAGEjlG3Qcs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="hero-button">Saiba mais sobre Violência racial no âmbito escolar</a>
+            <img src="{{ url_for('static', filename='img/imagem_hero.png') }}" alt="Imagem Hero">
+        </section>
+
+        <section class="sobre" id="sobre">
+            <div class="sobre-container">
+                <h2>SOBRE O NEABI</h2>
+                <p>
+                    O Núcleo de Estudos Afro-Brasileiros e Indígenas (Neabi) foi constituído no IFRN em 2011 pelo Conselho Superior de Ensino, Pesquisa e Extensão (Consepex). O Núcleo visa valorizar as diversas manifestações culturais de etnias e segmentos sociais, contribuindo para a ampliação do debate das políticas de ações afirmativas e de promoção da igualdade étnico-racial.
+                </p>
+                <p>
+                    O Neabi é responsável por fomentar e promover ações de natureza sistêmica no âmbito do Ensino, Pesquisa e Extensão, que promovam o cumprimento efetivo da Lei 10.639/2003, da Lei 11.654/2008 e das demais.
+                </p>
+                <p>
+                    De acordo com a Portaria nº 118/2023 - DG/CM/RE/IFRN, com efeitos retroativos a partir da data de 1º de novembro de 2022, a composição do Neabi no âmbito do Campus Ceará-Mirim é a seguinte:
+                </p>
+                <div class="membros">
+                    <ul>
+                        <li><strong>Fernanda de Moura Ferreira</strong> (coordenadora docente)</li>
+                        <li><strong>Bruna Rafaela de Lima Lopes</strong> (membro docente)</li>
+                        <li><strong>Dayveson Noberto da Costa Pereira</strong> (membro docente)</li>
+                        <li><strong>Rhena Raize Peixoto de Lima</strong> (membro docente)</li>
+                        <li><strong>Luana Sobral Hilario</strong> (membro técnica administrativa)</li>
+                        <li><strong>Jessica do Nascimento</strong> (membro discente)</li>
+                        <li><strong>Carlos Eduardo de Araújo</strong> (membro representante da comunidade externa)</li>
+                        <li><strong>Ludmilla Gonçalves</strong> (membro discente - voluntária)</li>
+                        <li><strong>Anna Clara de Melo</strong> (membro discente - voluntária)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section class="noticias" id="noticias">
+            <h2>NOTÍCIAS</h2>
+            <div class="news-carousel">
+                <div class="noticias-card">
+                    <a href="https://www.instagram.com/neabiifcm/" target="_blank">
+                        <img src="{{ url_for('static', filename='img/imagem1.png') }}" alt="Notícia 1">
+                        <h3>Inscrições para bolsas</h3>
+                    </a>
+                </div>
+        
+                <div class="noticias-card">
+                    <a href="https://www.instagram.com/neabiifcm/" target="_blank">
+                        <img src="{{ url_for('static', filename='img/imagem2.png') }}" alt="Notícia 2">
+                        <h3>Projeto de pesquisa atual</h3>
+                    </a>
+                </div>
+        
+                <div class="noticias-card">
+                    <a href="https://www.instagram.com/neabiifcm/" target="_blank">
+                        <img src="{{ url_for('static', filename='img/imagem3.png') }}" alt="Notícia 3">
+                        <h3>Grupo samaúma</h3>
+                    </a>
+                </div>
+        
+                <div class="noticias-card">
+                    <a href="https://www.instagram.com/neabiifcm/" target="_blank">
+                        <img src="{{ url_for('static', filename='img/imagem4.png') }}" alt="Notícia 4">
+                        <h3>Eventos</h3>
+                    </a>
+                </div>
+        
+                <div class="noticias-card">
+                    <a href="https://www.instagram.com/neabiifcm/" target="_blank">
+                        <img src="{{ url_for('static', filename='img/imagem5.png') }}" alt="Notícia 5">
+                        <h3>Seja um voluntário</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-cartilha" id="cartilha">
+            <h2>CARTILHA: VIOLÊNCIA RACIAL NO AMBIENTE ESCOLAR</h2>
+            <p>Confira abaixo um pouco de cada capítulo abordado na cartilha "Violência Racial no âmbito Escolar"</p>
+            <div class="carousel2">
+                <div class="carousel-inner">
+                    <div class="card" onclick="showContent(0)">
+                        <h3>O QUE É O RACISMO?</h3>
+                    </div>
+                    <div class="card" onclick="showContent(1)">
+                        <h3>COMO O RACISMO SE MANIFESTA?</h3>
+                    </div>
+                    <div class="card" onclick="showContent(2)">
+                        <h3>QUEM SOFRE RACISMO NO BRASIL?</h3>
+                    </div>
+                    <div class="card" onclick="showContent(3)">
+                        <h3>COMO IDENTIFICAR O RACISMO NA ESCOLA?</h3>
+                    </div>
+                    <div class="card" onclick="showContent(4)">
+                        <h3>O QUE FAZER EM UM CASO DE RACISMO?</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content" id="content">
+                <h3>CLIQUE NO CARD PARA VER UMA PRÉVIA DA CARTILHA AQUI.</h3>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>O QUE DIZEM SOBRE NÓS</h2>
+            <p>"Escolhi Sarah por sua experiência e criatividade com redes sociais. Desde o início, tenho uma excelente relação que progride sem precisar me envolver muito. Sarah é uma combinação de atitude incrível com talento superior!"</p>
+            <p>- Kim, JAN-PRO of Charlotte</p>
+        </section>
+        <section class="about">
+            <h2>PRAZER EM TE CONHECER</h2>
+            <p>Eu sou Sarah, a pessoa por trás da Sarah Catherine Creative. Sou motivada pela minha paixão por contar histórias, por feeds de Instagram curados e por muita cafeína.</p>
+            <p>Atendo empresas que desejam uma presença online impactante, mas não têm tempo para criar e gerenciar elas mesmas.</p>
+            <p>Então, na maioria dos dias, você vai me encontrar digitando no meu laptop com um latte ao lado, criando conteúdo fresco ou rolando no Instagram em busca de novas tendências.</p>
+            <button>SEJAMOS AMIGOS!</button>
+            <img src="{{ url_for('static', filename='img/about.jpg') }}" alt="Sarah">
+        </section>
+
+    </main>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
