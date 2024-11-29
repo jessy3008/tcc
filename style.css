@@ -178,8 +178,7 @@ button.ativar .linha:nth-child(2) {
 
 /*SOBRE O NEABI*/
 .sobre {
-    background: linear-gradient(rgb(67, 37, 5), rgba(96, 63, 13, 0.87)), 
-                url('img/imagem_sobre.png') no-repeat center center;
+    background-color: #3e2203;
     background-size: cover;
     padding: 40px 20px;
     position: relative;
@@ -209,9 +208,9 @@ button.ativar .linha:nth-child(2) {
     padding: 10px 20px;
     font-size: 1.2rem;
     color: white;
-    background-color:#3e2203;
+    background-color:#583813;
     border: none;
-    border-radius: 5px;
+    border-radius: 7px;
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -231,7 +230,7 @@ button.ativar .linha:nth-child(2) {
 .noticias {
     padding: 50px 20px;
     text-align: center;
-    background-color:#3e2203;
+    background-color:#503210;
 }
 
 .noticias h2 {
@@ -250,11 +249,11 @@ button.ativar .linha:nth-child(2) {
 .noticias-card {
     min-width: 150px;
     max-width: 250px;
-    margin: 0 10px;
+    margin: 10px 10px;
     padding: 10px;
-    background-color:#5b3813;
+    background-color:#3e2203;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.309);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -316,8 +315,11 @@ button.ativar .linha:nth-child(2) {
 
 /*Cartilha */
 .cartilha {
+    background: linear-gradient(rgb(67, 37, 5), rgba(96, 63, 13, 0.67)), 
+    url('img/imagem_cartilha.png') no-repeat center center;
+    background-size: cover;
     padding: 50px 20px;
-    background-color:#4b2e10;
+    position: relative;
     text-align: center;
 }
 
@@ -339,7 +341,7 @@ button.ativar .linha:nth-child(2) {
 .cartilha-image img {
     max-width: 200px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.206);
 }
 
 .cartilha-content {
@@ -453,6 +455,8 @@ button.ativar .linha:nth-child(2) {
         visibility: visible;
     }
 
+    /*HERO*/
+
     .hero {
         position: relative;
         height: 0px;
@@ -503,23 +507,34 @@ button.ativar .linha:nth-child(2) {
         z-index: 1;
     }
 
-    .sobre {
-        background: linear-gradient(rgb(67, 37, 5), rgba(69, 41, 0, 0.9));
-        background-size: cover;
-        padding: 40px 20px;
-        position: relative;
 
+    /*SOBRE*/
+    .sobre-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1.0rem;
+        color: white;
+        background-color:#5c370d;
+        border: none;
+        border-radius: 7px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        z-index: 2;
+        position: relative;
+        margin-bottom: 25px;
+    
     }
     
-    .membros li {
-        padding-bottom: 15px;
-        font-size: 16px;
-        color: #e1c49a;
-    }
-    
-    .membros li strong {
-        font-size: 20px;
-        color: #f7dcb6;
+    /*CARTILHA*/
+
+    .cartilha {
+        background: linear-gradient(rgb(67, 37, 5), rgba(96, 63, 13, 0.67)), 
+        url('img/imagem_cartilha.png') no-repeat bottom bottom;
+        background-size: cover;
+        padding: 50px 20px;
+        position: relative;
+        text-align: center;
     }
     
     .cartilha h2 {
