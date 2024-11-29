@@ -1,152 +1,171 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neabi IFCM</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Neabi ifcm</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
 </head>
+
 <body>
-    <header>
-        <div class="top-banner">
-            @NEABIIFCM
+    <header class="header">
+        <div class="menu-desktop">
+            <nav class="nav1">
+                <div class="logo"><img src="img/logo.png" alt=""></div>
+                <ul class="menu">
+                    <li><a href="#sobre">SOBRE O NEABI</a></li>
+                    <li><a href="#noticias">NOTÍCIAS</a></li>
+                    <li><a href="#cartilha">CARTILHA</a></li>
+                    <li><a href="#">DENÚNCIAS</a></li>
+                </ul>
+
+                <button onclick="animar()" id="btn-menu">
+                    <span class="linha"></span>
+                    <span class="linha"></span>
+                    <span class="linha"></span>
+                </button>
+
+            </nav>
         </div>
-        
-        <nav>
-            <div class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo NEABI"></div>
-            <ul>
-                <li><a href="#sobre">SOBRE O NEABI</a></li>
-                <li><a href="#noticias">NOTÍCIAS</a></li>
-                <li><a href="#cartilha">CARTILHA</a></li>
-                <li><a href="{{ url_for('login_form') }}">DENÚNCIAS</a></li> 
-            </ul>
-        </nav>
-        
+
+
+        <div class="menu-mobile" id="menu-mobile">
+            <nav class="nav2">
+                <a href="#sobre">SOBRE O NEABI</a>
+                <a href="#noticias">NOTÍCIAS</a>
+                <a href="#cartilha">CARTILHA</a>
+                <a href="#">DENÚNCIAS</a>
+            </nav>
+        </div>
     </header>
+
     <main>
         <section class="hero">
             <h1>NEABI</h1>
-            <h2>NÚCLEO DE ESTUDOS AFROBRASILEIROS E INDÍGENAS</h2>
-            <a href="https://www.canva.com/design/DAGEjlG3Qcs/bPQTRdSB2TD96mJ9ASZREA/edit?utm_content=DAGEjlG3Qcs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="hero-button">Saiba mais sobre Violência racial no âmbito escolar</a>
-            <img src="{{ url_for('static', filename='img/imagem_hero.png') }}" alt="Imagem Hero">
+            <h2 class="subtitulo">NÚCLEO DE ESTUDOS AFROBRASILEIROS E INDÍGENAS</h2>
+            <a href="https://www.instagram.com/neabiifcm/" target="_blank" class="hero-button">Visite nosso instagram | @neabiifcm</a>
+            <img src="img/imagem_hero.png" alt="add uma imagem">
         </section>
 
         <section class="sobre" id="sobre">
             <div class="sobre-container">
                 <h2>SOBRE O NEABI</h2>
                 <p>
-                    O Núcleo de Estudos Afro-Brasileiros e Indígenas (Neabi) foi constituído no IFRN em 2011 pelo Conselho Superior de Ensino, Pesquisa e Extensão (Consepex). O Núcleo visa valorizar as diversas manifestações culturais de etnias e segmentos sociais, contribuindo para a ampliação do debate das políticas de ações afirmativas e de promoção da igualdade étnico-racial.
+                    O Núcleo de Estudos Afro-Brasileiros e Indígenas (Neabi) foi constituído no IFRN em 2011 pelo Conselho Superior de Ensino, Pesquisa e Extensão (Consepex). O Núcleo visa valorizar as diversas manifestações culturais de etnias e segmentos sociais, contribuindo para a ampliação do debate das políticas de ações afirmativas e de promoção da igualdade étnico-racial. <a class="saiba_mais" href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTYzNzg1NzMwMzU2ODgz?igsh=cHRzcXZnZTB1cnp5">Saiba mais sobre o NEABI clicando aqui!</a>
                 </p>
                 <p>
                     O Neabi é responsável por fomentar e promover ações de natureza sistêmica no âmbito do Ensino, Pesquisa e Extensão, que promovam o cumprimento efetivo da Lei 10.639/2003, da Lei 11.654/2008 e das demais.
                 </p>
-                <p>
-                    De acordo com a Portaria nº 118/2023 - DG/CM/RE/IFRN, com efeitos retroativos a partir da data de 1º de novembro de 2022, a composição do Neabi no âmbito do Campus Ceará-Mirim é a seguinte:
-                </p>
-                <div class="membros">
-                    <ul>
-                        <li><strong>Fernanda de Moura Ferreira</strong> (coordenadora docente)</li>
-                        <li><strong>Bruna Rafaela de Lima Lopes</strong> (membro docente)</li>
-                        <li><strong>Dayveson Noberto da Costa Pereira</strong> (membro docente)</li>
-                        <li><strong>Rhena Raize Peixoto de Lima</strong> (membro docente)</li>
-                        <li><strong>Luana Sobral Hilario</strong> (membro técnica administrativa)</li>
-                        <li><strong>Jessica do Nascimento</strong> (membro discente)</li>
-                        <li><strong>Carlos Eduardo de Araújo</strong> (membro representante da comunidade externa)</li>
-                        <li><strong>Ludmilla Gonçalves</strong> (membro discente - voluntária)</li>
-                        <li><strong>Anna Clara de Melo</strong> (membro discente - voluntária)</li>
-                    </ul>
+                
+                <a href="pdf/portaria_neabi.pdf" target="_blank" class="sobre-button">Confira a portaria do NEABI/CM aqui</a>
+
+                
                 </div>
             </div>
         </section>
         
+
         <section class="noticias" id="noticias">
             <h2>NOTÍCIAS</h2>
+            
             <div class="news-carousel">
                 <div class="noticias-card">
                     <a href="https://www.instagram.com/neabiifcm/" target="_blank">
-                        <img src="{{ url_for('static', filename='img/imagem1.png') }}" alt="Notícia 1">
+                        <img src="img/imagem1.png" alt="Notícia 1">
                         <h3>Inscrições para bolsas</h3>
                     </a>
                 </div>
         
                 <div class="noticias-card">
                     <a href="https://www.instagram.com/neabiifcm/" target="_blank">
-                        <img src="{{ url_for('static', filename='img/imagem2.png') }}" alt="Notícia 2">
+                        <img src="img/imagem2.png" alt="Notícia 2">
                         <h3>Projeto de pesquisa atual</h3>
                     </a>
                 </div>
         
                 <div class="noticias-card">
                     <a href="https://www.instagram.com/neabiifcm/" target="_blank">
-                        <img src="{{ url_for('static', filename='img/imagem3.png') }}" alt="Notícia 3">
+                        <img src="img/imagem3.png" alt="Notícia 3">
                         <h3>Grupo samaúma</h3>
                     </a>
                 </div>
         
                 <div class="noticias-card">
-                    <a href="https://www.instagram.com/neabiifcm/" target="_blank">
-                        <img src="{{ url_for('static', filename='img/imagem4.png') }}" alt="Notícia 4">
+                    <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDI1MzMyOTMxNzY4NDIz?igsh=MTV2dW41dHV0NGJ2eg==" target="_blank">
+                        <img src="img/imagem4.png" alt="Notícia 4">
                         <h3>Eventos</h3>
                     </a>
                 </div>
         
                 <div class="noticias-card">
                     <a href="https://www.instagram.com/neabiifcm/" target="_blank">
-                        <img src="{{ url_for('static', filename='img/imagem5.png') }}" alt="Notícia 5">
+                        <img src="img/imagem5.png" alt="Notícia 5">
                         <h3>Seja um voluntário</h3>
                     </a>
                 </div>
             </div>
         </section>
-
-        <section class="card-cartilha" id="cartilha">
-            <h2>CARTILHA: VIOLÊNCIA RACIAL NO AMBIENTE ESCOLAR</h2>
-            <p>Confira abaixo um pouco de cada capítulo abordado na cartilha "Violência Racial no âmbito Escolar"</p>
-            <div class="carousel2">
-                <div class="carousel-inner">
-                    <div class="card" onclick="showContent(0)">
-                        <h3>O QUE É O RACISMO?</h3>
-                    </div>
-                    <div class="card" onclick="showContent(1)">
-                        <h3>COMO O RACISMO SE MANIFESTA?</h3>
-                    </div>
-                    <div class="card" onclick="showContent(2)">
-                        <h3>QUEM SOFRE RACISMO NO BRASIL?</h3>
-                    </div>
-                    <div class="card" onclick="showContent(3)">
-                        <h3>COMO IDENTIFICAR O RACISMO NA ESCOLA?</h3>
-                    </div>
-                    <div class="card" onclick="showContent(4)">
-                        <h3>O QUE FAZER EM UM CASO DE RACISMO?</h3>
-                    </div>
-                </div>
+        
+    <!-- HTML para a seção da Cartilha -->
+    <section class="cartilha" id="cartilha">
+        <div class="cartilha-container">
+            <div class="cartilha-image">
+                <img src="img/capa.png" alt="Capa da Cartilha">
             </div>
-
-            <div class="content" id="content">
-                <h3>CLIQUE NO CARD PARA VER UMA PRÉVIA DA CARTILHA AQUI.</h3>
+            <div class="cartilha-content">
+                <h2>(Re)conhecer para Combater</h2>
+                <p class="convite"> <strong> Conheça a cartilha: "(Re)conhecer para combater":</strong></p>
+                
+                <p>
+                    Este material foi desenvolvida pela aluna Jessica do Nascimento Vicente, concluinte do curso de informática do IFRN/CM e membro discente do NEABI/CM. O intuito da cartilha é promover a conscientização e o conhecimento sobre o e a violência étnico-racial na escola. Aborda questões importantes de maneira educativa, lúdica, acessível e com exemplos conteporâneos.
+                </p>
+                <a href="pdf/Cartilha Violência racial e racismo na escola.pdf" target="_blank" class="cartilha-link">Leia a Cartilha</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="testimonials">
-            <h2>O QUE DIZEM SOBRE NÓS</h2>
-            <p>"Escolhi Sarah por sua experiência e criatividade com redes sociais. Desde o início, tenho uma excelente relação que progride sem precisar me envolver muito. Sarah é uma combinação de atitude incrível com talento superior!"</p>
-            <p>- Kim, JAN-PRO of Charlotte</p>
-        </section>
-        <section class="about">
-            <h2>PRAZER EM TE CONHECER</h2>
-            <p>Eu sou Sarah, a pessoa por trás da Sarah Catherine Creative. Sou motivada pela minha paixão por contar histórias, por feeds de Instagram curados e por muita cafeína.</p>
-            <p>Atendo empresas que desejam uma presença online impactante, mas não têm tempo para criar e gerenciar elas mesmas.</p>
-            <p>Então, na maioria dos dias, você vai me encontrar digitando no meu laptop com um latte ao lado, criando conteúdo fresco ou rolando no Instagram em busca de novas tendências.</p>
-            <button>SEJAMOS AMIGOS!</button>
-            <img src="{{ url_for('static', filename='img/about.jpg') }}" alt="Sarah">
-        </section>
+    
+<footer class="site-footer">
+    <div class="footer-container">
+        
+        <div class="footer-logo">
+            <img src="img/logo.png" alt="logo neabi">
+        </div>
+        
+        <div class="footer-info">
+            <h3>Entre em contato com o NEABI</h3>
+            <p>Email: neabiifcm@gmail.com</p>
+            <p>Instagram: <a href="https://www.instagram.com/neabiifcm/" target="_blank">@neabiifcm</a></p>
+        </div>
+   
+        <div class="footer-developer">
+            <h3>Este site foi desenvolvido por:</h3>
+            <p><strong>Jesica do Nascimento Vicente</strong></p>
+            <p>Email: n.jessv0@gmail.com</p>
+            <p>Instagram: @jessicavicente__</p>
+        </div>
+    </div>
+</footer>
 
-    </main>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+<script>
+    function animar(){
+        const btn = document.getElementById("btn-menu")
+        btn.classList.toggle("ativar")
+    }
+</script>
+
+<script src="script.js"></script>
+<script src="animar.js"></script>
+
 </body>
-</html>
+<!-- 
+obs: arquivo certo  -->
