@@ -184,28 +184,21 @@ def minhas_denuncias():
 #rota para tela de adm
 @app.route('/admin')
 def admin_page():
+    # Busca todas as denúncias do banco de dados
     db = conexaodb()
     cursor = db.cursor()
-
-    # Consulta para buscar todas as denúncias com as informações associadas
     cursor.execute('''
-        SELECT 
-            d.id,              -- ID da denúncia
-            u.nome,            -- Nome do usuário
-            td.nome,           -- Nome do tipo de denúncia
-            sd.status,         -- Status da denúncia
-            d.denuncia,        -- Texto da denúncia
-            d.data_denuncia    -- Data da denúncia
+        SELECT d.id, u.nome, td.nome, sd.status, d.denuncia, d.data_denuncia
         FROM denuncias d
-        LEFT JOIN usuarios u ON d.usuario_id = u.id
-        LEFT JOIN tipos_denuncias td ON d.tipo_denuncia_id = td.id
-        LEFT JOIN status_denuncias sd ON d.status_denuncia_id = sd.id
+        JOIN usuarios u ON d.usuario_id = u.id
+        JOIN tipos_denuncias td ON d.tipo_denuncia_id = td.id
+        JOIN status_denuncias sd ON d.status_denuncia_id = sd.id
     ''')
-
     denuncias = cursor.fetchall()
     db.close()
-
+    
     return render_template('adm.html', denuncias=denuncias)
+
 
 
 

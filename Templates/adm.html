@@ -6,19 +6,17 @@
     <title>Administração - Gerenciar Denúncias</title>
     <link rel="stylesheet" href="../static/css/adm.css">
 </head>
-
 <body>
     <div class="container">
         <h2>Administração - Gerenciar Denúncias</h2>
         <table>
             <thead>
                 <tr>
-
                     <th>Usuário</th>
                     <th>Tipo de Denúncia</th>
                     <th>Status</th>
                     <th>Denúncia</th>
-                    <th>Data</th>
+                    <th>Dados</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -32,11 +30,30 @@
                     <td>{{ denuncia[4] }}</td>
                     <td>{{ denuncia[5] }}</td>
                     <td>
-                        <form action="{{ url_for('atualizar_denuncia', denuncia_id=denuncia[0]) }}" method="post" style="display:inline;">
+                        <form 
+                            action="{{ url_for('atualizar_denuncia', denuncia_id=denuncia[0]) }}" 
+                            method="post" 
+                            style="display:inline;"
+                        >
                             <select name="status_denuncia_id">
-                                <option value="1" {% if denuncia[3] == 'Pendente' %}selected{% endif %}>Pendente</option>
-                                <option value="2" {% if denuncia[3] == 'Em Andamento' %}selected{% endif %}>Em Andamento</option>
-                                <option value="3" {% if denuncia[3] == 'Concluído' %}selected{% endif %}>Concluído</option>
+                                <option 
+                                    value="1" 
+                                    {% if denuncia[3] == 'Pendente' %}selected{% endif %}
+                                >
+                                    Pendente
+                                </option>
+                                <option 
+                                    value="2" 
+                                    {% if denuncia[3] == 'Em Andamento' %}selected{% endif %}
+                                >
+                                    Em Andamento
+                                </option>
+                                <option 
+                                    value="3" 
+                                    {% if denuncia[3] == 'Concluído' %}selected{% endif %}
+                                >
+                                    Concluído
+                                </option>
                             </select>
                             <button type="submit" class="action-btn">Atualizar Status</button>
                         </form>

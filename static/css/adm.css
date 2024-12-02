@@ -1,3 +1,4 @@
+/* CSS do ADM */
 * {
     margin: 0;
     padding: 0;
@@ -33,18 +34,18 @@ h2 {
     font-weight: bold;
 }
 
-
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-th, td {
+th,
+td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #d6c6b8; 
-    border-right: 1px solid #d6c6b8; 
+    border-bottom: 1px solid #d6c6b8;
+    border-right: 1px solid #d6c6b8;
 }
 
 th {
@@ -53,7 +54,8 @@ th {
     font-weight: bold;
 }
 
-th:last-child, td:last-child {
+th:last-child,
+td:last-child {
     border-right: none;
 }
 
@@ -62,9 +64,8 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover {
-    background-color: #e9dfd1
+    background-color: #e9dfd1;
 }
-
 
 @media (max-width: 768px) {
     .container {
@@ -79,7 +80,8 @@ tbody tr:hover {
         font-size: 14px;
     }
 
-    th, td {
+    th,
+    td {
         padding: 8px;
         font-size: 14px;
     }
@@ -95,12 +97,15 @@ tbody tr:hover {
         font-size: 22px;
     }
 
-    th, td {
+    th,
+    td {
         font-size: 13px;
         padding: 6px;
     }
 
-    table, th, td {
+    table,
+    th,
+    td {
         display: block;
         width: 100%;
         text-align: right;
