@@ -39,7 +39,7 @@
                 <a href="#sobre">SOBRE O NEABI</a>
                 <a href="#noticias">NOTÍCIAS</a>
                 <a href="#cartilha">CARTILHA</a>
-                <a href="/formcadastroU">DENÚNCIAS</a>
+                <a href="/loginU">DENÚNCIAS</a>
             </nav>
         </div>
     </header>
@@ -62,7 +62,7 @@
                 <p>
                     O Neabi é responsável por fomentar e promover ações de natureza sistêmica no âmbito do Ensino, Pesquisa e Extensão, que promovam o cumprimento efetivo da Lei 10.639/2003, da Lei 11.654/2008 e das demais.
                 </p>
-                <a href="pdf/portaria_neabi.pdf" target="_blank" class="sobre-button">Confira a portaria do NEABI/CM aqui</a>
+                <a href="{{ url_for('static', filename='pdf/portaria.pdf') }}" target="_blank" class="sobre-button">Confira a portaria do NEABI/CM aqui</a>
             </div>
         </section>
 
@@ -113,7 +113,7 @@
                     <p>
                         Este material foi desenvolvido pela aluna Jessica do Nascimento Vicente, concluinte do curso de informática do IFRN/CM e membro discente do NEABI/CM. O intuito da cartilha é promover a conscientização e o conhecimento sobre o e a violência étnico-racial na escola. Aborda questões importantes de maneira educativa, lúdica, acessível e com exemplos contemporâneos.
                     </p>
-                    <a href="pdf/Cartilha Violência racial e racismo na escola.pdf" target="_blank" class="cartilha-link">Leia a Cartilha</a>
+                    <a href="{{ url_for('static', filename='pdf/cartilha.pdf') }}" target="_blank" class="cartilha-link">Leia a Cartilha</a>
                 </div>
             </div>
         </section>
@@ -136,6 +136,9 @@
                     <p><strong>Raul Gabriel da Cruz Soares Moreira da Silva</strong></p>
                     <p>Email: rauljju0@gmail.com</p>
                     <p>Instagram: @rauldcrz</p>
+                    <p><strong>Jéssica Maria de Souza Costa</strong></p>
+                    <p>Email: jc721353@gmail.com</p>
+                    <p>Instagram: @rodrigues__0_0_</p>
                 </div>
             </div>
         </footer>
