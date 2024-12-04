@@ -23,7 +23,7 @@ def close_connection(exception):
 # Rota para a página inicial
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('loginU.html')
 
 
 # Rota para exibir o formulário de cadastro de usuário
