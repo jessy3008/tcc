@@ -9,6 +9,19 @@
 <body>
     <div class="container">
         <h2>Cadastro de Usuário</h2>
+        
+        
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% endwith %}
+       
+       
         <form action="/cadastrar_usuario" method="post">
             <div class="form-group">
                 <label for="nome">Nome:</label>

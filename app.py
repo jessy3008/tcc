@@ -1,4 +1,4 @@
-from flask import Flask, g, render_template, request, redirect, url_for, session
+from flask import Flask, g, render_template, request, redirect, url_for, session, flash
 import sqlite3
 import hashlib
 
@@ -42,7 +42,6 @@ def cadastrar_usuario():
     senha = request.form['senha']
     tipo_usuario_id = request.form['tipo_usuario_id'] 
 
-    # Criptografando a senha
     senha_hash = hashlib.sha256(senha.encode()).hexdigest()
 
     db = conexaodb()
@@ -55,13 +54,16 @@ def cadastrar_usuario():
         ''', (nome, matricula, telefone, senha_hash, tipo_usuario_id))
         db.commit()
 
-        # Verifica se o tipo de usuário é 'Administrador' (tipo_usuario_id == 1)
         if tipo_usuario_id == '1':  
-            return redirect(url_for('admin_page'))  # Redireciona para a página de administração
+            return redirect(url_for('admin_page'))
         else:
-            return redirect(url_for('denuncia_form'))  # Caso contrário, redireciona para a página de denúncias
-    except sqlite3.IntegrityError as e:
-        return f'Erro: {e}'
+            return redirect(url_for('denuncia_form'))
+    except sqlite3.IntegrityError:
+        flash('Erro: Matrícula ou Email já cadastrados.')  # Exibe mensagem de erro
+        return redirect(url_for('form_cadastro'))  # Retorna para o formulário de cadastro
+    except Exception as e:
+        flash(f'Já existe: {e}')
+        return redirect(url_for('form_cadastro'))
     finally:
         db.close()
 
@@ -147,7 +149,7 @@ def registrar_denuncia():
         return '''
             <p>Denúncia registrada com sucesso!</p>
             <a href="/denuncia">Voltar para a página de denúncia</a>
-            <a href="/">Ir para a página inicial</a>
+            <a href="http://cm.ifrn.edu.br/neabi">Ir para a página inicial</a>
         '''
     except sqlite3.IntegrityError as e:
         return f'Erro: {e}'
