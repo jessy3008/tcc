@@ -23,34 +23,19 @@
        
        
         <form action="/cadastrar_usuario" method="post">
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-            </div>
-            <div class="form-group">
-                <label for="matricula">Matrícula:</label>
-                <input type="text" id="matricula" name="matricula" required>
-            </div>
-            <div class="form-group">
-                <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" name="telefone">
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required>
-            </div>
-            <div class="form-group">
-                <label for="tipo_usuario_id">Tipo de Usuário:</label>
-                <select id="tipo_usuario_id" name="tipo_usuario_id" required>
-                    <option value="1">Administrador</option>
-                    <option value="2">Usuário Comum</option>
-                </select>
-            </div>
-            <button type="submit" class="submit-btn">Cadastrar</button>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br>
+
+            <label for="matricula">Matrícula:</label>
+            <input type="text" id="matricula" name="matricula" required><br>
+
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone"><br>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required><br>
+
+            <button type="submit">Cadastrar</button>
         </form>
     </div>
 </body>

@@ -38,31 +38,24 @@ def cadastrar_usuario():
     nome = request.form['nome']
     matricula = request.form['matricula']
     telefone = request.form['telefone']
-    email = request.form['email']
     senha = request.form['senha']
-    tipo_usuario_id = request.form['tipo_usuario_id'] 
 
+    # Hash da senha
     senha_hash = hashlib.sha256(senha.encode()).hexdigest()
+    tipo_usuario_id = 2  # Define como "Usuário comum" por padrão
 
     db = conexaodb()
     cursor = db.cursor()
-    
+
     try:
         cursor.execute('''
             INSERT INTO usuarios (nome, matricula, telefone, senha_hash, tipo_usuario_id) 
             VALUES (?, ?, ?, ?, ?)
         ''', (nome, matricula, telefone, senha_hash, tipo_usuario_id))
         db.commit()
-
-        if tipo_usuario_id == '1':  
-            return redirect(url_for('admin_page'))
-        else:
-            return redirect(url_for('denuncia_form'))
+        return redirect(url_for('denuncia_form'))  # Redireciona para a tela de denúncias
     except sqlite3.IntegrityError:
-        flash('Erro: Matrícula ou Email já cadastrados.')  # Exibe mensagem de erro
-        return redirect(url_for('form_cadastro'))  # Retorna para o formulário de cadastro
-    except Exception as e:
-        flash(f'Já existe: {e}')
+        flash('Erro: Matrícula já cadastrada.')
         return redirect(url_for('form_cadastro'))
     finally:
         db.close()
@@ -95,16 +88,17 @@ def login_usuario():
     db.close()
     
     if user:
-        session['user_id'] = user[0]  #
+        session['user_id'] = user[0]  # Salva o ID do usuário na sessão
         tipo_usuario_id = user[5]  
 
-       
+        # Redireciona com base no tipo do usuário
         if tipo_usuario_id == 1:
             return redirect(url_for('admin_page')) 
         else:
             return redirect(url_for('denuncia_form')) 
     else:
-        return 'Matrícula ou senha inválidos.'
+        flash('Matrícula ou senha inválidos. Por favor, tente novamente.', 'error')  # Mensagem de erro
+        return redirect(url_for('login_form'))
     
 
 
@@ -204,6 +198,7 @@ def admin_page():
 
 
 
+
 @app.route('/atualizar_denuncia/<int:denuncia_id>', methods=['POST'])
 def atualizar_denuncia(denuncia_id):
     novo_status_id = request.form['status_denuncia_id']
@@ -223,6 +218,8 @@ def atualizar_denuncia(denuncia_id):
         return f'Erro ao atualizar denúncia: {e}'
     finally:
         db.close()
+
+
 
 
 
